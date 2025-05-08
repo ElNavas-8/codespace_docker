@@ -1,14 +1,14 @@
 {
-    "name": "Docker Dev COntainer",
+    "name": "Docker Dev Container",
     "build": {
-        "dockerfile": "Dockerfile"
+      "dockerfile": "Dockerfile"
     },
     "features": {
-        "docker-in-docker": "lastest"
+      "ghcr.io/devcontainers/features/docker-in-docker:1": "latest"
     },
     "mounts": [
-        "source=/var/run/docker.sock, target=/var/run/docker.sock, type=bind"
+      "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
     ],
-    "postCreateCommand": "sudo chown vscode:docker/var/run/docker.sock || true",
+    "postCreateCommand": "sudo chown vscode:docker /var/run/docker.sock || true",
     "remoteUser": "vscode"
-}
+  }
